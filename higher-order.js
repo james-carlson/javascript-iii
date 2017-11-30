@@ -9,7 +9,7 @@
 
 const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 
-let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
+let evenNumbers = mixedNumbers.filter(element => element % 2 === 0)
 
 // Below we have an array of prices.  We want to calculate their totals after
 // We want to use a map function on the prices to calculate a new array of
@@ -79,4 +79,13 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 {"owner":"Barry","price":30},{"owner":"Barry","price":129},{"owner":"Barry","price":38},
 {"owner":"Bob","price":133},{"owner":"Barry","price":109},{"owner":"Bob","price":115}]
 
-let bobsTotal // Your code here
+let bobTotalHolder = 0
+let bobsTotal = purchases.reduce(function(prev, next, index, arr){
+    if (arr[index].owner === "Bob"){
+        bobTotalHolder = bobTotalHolder + arr[index].price
+    }
+    return bobTotalHolder;
+}, 0)
+    // Your code here
+
+

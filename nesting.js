@@ -84,6 +84,7 @@ var cat = {
 
 // Code here
 
+
 var grumpyActivity;
 var fluffy2ndFriend;
 
